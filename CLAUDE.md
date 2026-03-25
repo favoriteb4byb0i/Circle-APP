@@ -90,9 +90,16 @@ src/
 
 ## Figma Integration
 
-Figma MCP Server ist konfiguriert. Zum Verwenden:
+Figma MCP Server ist konfiguriert. Um Figma zu verbinden, brauche ich mehr Kontext:
+
+1. **Hast du eine Figma-Datei?** — Teile den Link oder exportierte Screenshots, und ich passe die UI an dein Design an.
+2. **Willst du Figma Dev Mode / API nutzen?** — Dafür brauche ich ein Figma Access Token und die File-ID.
+3. **Willst du die bestehenden Screens als Figma-kompatible Komponenten umstrukturieren?** — Die App ist bereits in saubere Einzelkomponenten aufgeteilt (siehe Projektstruktur oben).
+
+### Zum Verwenden:
 - Figma-Datei-URL in die Session einfügen
 - Claude kann dann Frames lesen, Designs inspizieren und Code ableiten
+- Oder: Screenshots/Exports von Figma-Screens teilen für manuelle Umsetzung
 
 ## Architektur-Prinzipien
 

@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#452861"/>
-  <circle cx="16" cy="16" r="8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="40 10"/>
-</svg>
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: true
+  }
+})

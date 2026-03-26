@@ -2,7 +2,7 @@ import { useState } from "react";
 import { C, globalCss } from "./constants";
 import { Nav } from "./components";
 import { Onboarding, NotifPanel } from "./screens";
-import { Home, Earn, Couple, Educational, CreatorsScreen, Profile, Referral } from "./pages";
+import { Home, Earn, Couple, Educational, CreatorsScreen, Profile, Referral, Shop } from "./pages";
 import { NOTIFS } from "./data";
 
 export default function App() {
@@ -30,6 +30,7 @@ export default function App() {
       {screen === "events" && <Home points={points} go={setScreen} onNotif={() => setNotifOpen(true)} unreadCount={unreadCount} />}
       {screen === "profile" && <Profile points={points} onReferral={() => setScreen("referral")} />}
       {screen === "referral" && <Referral onBack={() => setScreen("profile")} />}
+      {screen === "shop" && <Shop points={points} onBack={() => setScreen("home")} />}
       <Nav active={screen} go={setScreen} />
       <NotifPanel open={notifOpen} onClose={() => setNotifOpen(false)} onNav={setScreen} />
     </div>

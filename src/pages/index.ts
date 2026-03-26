@@ -5,3 +5,4 @@ export { Educational } from './Educational';
 export { CreatorsScreen } from './Creators';
 export { Profile } from './Profile';
 export { Referral } from './Referral';
+export { Shop } from './Shop';

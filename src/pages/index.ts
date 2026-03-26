@@ -6,3 +6,5 @@ export { CreatorsScreen } from './Creators';
 export { Profile } from './Profile';
 export { Referral } from './Referral';
 export { Shop } from './Shop';
+export { Events } from './Events';
+export { Groups } from './Groups';

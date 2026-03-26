@@ -2,7 +2,7 @@ import { useState } from "react";
 import { C, globalCss } from "./constants";
 import { Nav } from "./components";
 import { Onboarding, NotifPanel } from "./screens";
-import { Home, Earn, Couple, Educational, CreatorsScreen, Profile, Referral, Shop } from "./pages";
+import { Home, Earn, Couple, Educational, CreatorsScreen, Profile, Referral, Shop, Events, Groups } from "./pages";
 import { NOTIFS } from "./data";
 
 export default function App() {
@@ -27,7 +27,8 @@ export default function App() {
       {screen === "couple" && <Couple />}
       {screen === "educational" && <Educational points={points} addPoints={(n: number) => setPoints(p => p + n)} />}
       {screen === "creators" && <CreatorsScreen />}
-      {screen === "events" && <Home points={points} go={setScreen} onNotif={() => setNotifOpen(true)} unreadCount={unreadCount} />}
+      {screen === "events" && <Events onBack={() => setScreen("home")} />}
+      {screen === "groups" && <Groups onBack={() => setScreen("couple")} />}
       {screen === "profile" && <Profile points={points} onReferral={() => setScreen("referral")} />}
       {screen === "referral" && <Referral onBack={() => setScreen("profile")} />}
       {screen === "shop" && <Shop points={points} onBack={() => setScreen("home")} />}
